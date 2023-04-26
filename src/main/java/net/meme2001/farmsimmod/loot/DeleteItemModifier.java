@@ -27,7 +27,7 @@ public class DeleteItemModifier extends LootModifier {
             .fieldOf("item").forGetter(m -> m.item)).apply(inst,DeleteItemModifier::new)));
     private final Item item;
 
-  
+
 
 
 
@@ -42,8 +42,9 @@ public class DeleteItemModifier extends LootModifier {
 
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        if (context.getRandom().nextFloat() >= 0.2) {
+        if (context.getRandom().nextFloat()>= 0.98F) {
             generatedLoot.add(new ItemStack(item));
+
         }
 
 

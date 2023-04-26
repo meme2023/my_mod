@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModLootModifier {
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Farmsimmod.MODID);
+            DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS,Farmsimmod.MODID);
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> DELETE_ITEM = LOOT_MODIFIER_SERIALIZERS.register("delete_item", DeleteItemModifier.CODEC);
 
 
