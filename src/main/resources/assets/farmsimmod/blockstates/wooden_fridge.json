@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=west": {
+      "model": "farmsimmod:block/wooden_fridge"
+    },
+    "facing=east": {
+      "model": "farmsimmod:block/wooden_fridge",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "farmsimmod:block/wooden_fridge",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "farmsimmod:block/wooden_fridge",
+      "y": 90
+    }
+  }
+}

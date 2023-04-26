@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "farmsimmod:block/tomateo_crop_stage4"
+  }
+}
