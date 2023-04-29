@@ -3,6 +3,9 @@
     "age=0": { "model": "farmsimmod:block/strawberry_0" },
     "age=1": { "model": "farmsimmod:block/strawberry_1" },
     "age=2": { "model": "farmsimmod:block/strawberry_2" },
-    "age=3": { "model": "farmsimmod:block/strawberry_3" }
+    "age=3": { "model": "farmsimmod:block/strawberry_3" },
+    "age=4": { "model": "farmsimmod:block/strawberry_4" },
+    "age=5": { "model": "farmsimmod:block/strawberry_5" },
+    "age=6": { "model": "farmsimmod:block/strawberry_6" }
   }
 }

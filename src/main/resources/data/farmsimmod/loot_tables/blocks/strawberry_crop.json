@@ -10,11 +10,11 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "farmsimmod:tomateo",
+              "name": "farmsimmod:strewberry",
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "farmsimmod:tomateo_crop",
+                  "block": "farmsimmod:strawberry_crop",
                   "properties": {
                     "age": "6"
                   }
@@ -23,7 +23,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "farmsimmod:tomateo_seed"
+              "name": "farmsimmod:strawberry_seed"
             }
           ]
         }
@@ -36,7 +36,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "farmsimmod:tomateo_crop",
+          "block": "farmsimmod:strawberry_crop",
           "properties": {
             "age": "6"
           }
