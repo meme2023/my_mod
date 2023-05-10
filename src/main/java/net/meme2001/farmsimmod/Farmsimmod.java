@@ -3,32 +3,26 @@ package net.meme2001.farmsimmod;
 import com.mojang.logging.LogUtils;
 import net.meme2001.farmsimmod.block.ModBlock;
 import net.meme2001.farmsimmod.block.entity.ModBlokEntity;
-import net.meme2001.farmsimmod.block.vanllablock.Vanlla_Block;
 import net.meme2001.farmsimmod.item.ModCreativeTab;
 import net.meme2001.farmsimmod.item.Moditems;
 import net.meme2001.farmsimmod.item.VanllaItems;
-import net.meme2001.farmsimmod.loot.DeleteItemModifier;
 import net.meme2001.farmsimmod.loot.ModLootModifier;
+import net.meme2001.farmsimmod.networking.ModPacket;
 import net.meme2001.farmsimmod.screen.ModMenuTypes;
 import net.meme2001.farmsimmod.screen.WoodenFridgeScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.openjdk.nashorn.internal.objects.Global;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -61,6 +55,7 @@ public class Farmsimmod
         modEventBus.addListener(this::addCreative);
 
 
+
     }
 
 
@@ -68,7 +63,13 @@ public class Farmsimmod
     private void commonSetup(final FMLCommonSetupEvent event)
     {
 
+        event.enqueueWork(() -> {
+
+            ModPacket.register();
+
+        });
     }
+
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
