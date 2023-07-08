@@ -3,6 +3,8 @@ package net.meme2001.farmsimmod.screen;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.meme2001.farmsimmod.Farmsimmod;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
@@ -18,6 +20,8 @@ public class WoodenFridgeScreen extends AbstractContainerScreen<WoodenFridgeMenu
         super(menu, inventory, component);
     }
 
+
+
     @Override
     protected void renderBg(PoseStack poseStack, float pPartialTick, int pMouseX, int pMouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
@@ -26,7 +30,7 @@ public class WoodenFridgeScreen extends AbstractContainerScreen<WoodenFridgeMenu
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
-        this.blit(poseStack, x, y, 0, 0, imageWidth, imageHeight);
+        This.blit(poseStack, x, y, 0, 0, imageWidth, imageHeight);
         
     }
 

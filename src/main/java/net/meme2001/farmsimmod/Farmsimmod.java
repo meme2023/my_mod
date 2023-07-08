@@ -16,7 +16,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -71,9 +71,9 @@ public class Farmsimmod
     }
 
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event)
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTab()== ModCreativeTab.FARMSIM_TAB)
+        if(event.getTab()== ModCreativeTab.FARMSIM_TAB.get())
         {
             event.accept(Moditems.TOMATEOS);
             event.accept(Moditems.Strewberry);
@@ -84,7 +84,7 @@ public class Farmsimmod
 
 
         }
-        if(event.getTab()== CreativeModeTabs.FOOD_AND_DRINKS )
+        if(event.getTabKey()== CreativeModeTabs.FOOD_AND_DRINKS )
 
             event.accept(VanllaItems.APPLE);
 

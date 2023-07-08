@@ -3,13 +3,7 @@ package net.meme2001.farmsimmod.block.entity;
 
 import net.meme2001.farmsimmod.Farmsimmod;
 import net.meme2001.farmsimmod.block.ModBlock;
-import net.meme2001.farmsimmod.block.custome.woodenfridage;
-import net.meme2001.farmsimmod.block.entity.wooden_fridge_entity;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

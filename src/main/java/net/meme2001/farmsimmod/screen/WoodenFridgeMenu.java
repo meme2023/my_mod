@@ -11,8 +11,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 
 
@@ -67,7 +65,7 @@ public class WoodenFridgeMenu extends AbstractContainerMenu {
     }
 
     public WoodenFridgeMenu(int id, Inventory inv, FriendlyByteBuf extradata) {
-        this(id, inv, inv.player.level.getBlockEntity(extradata.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.getLevel().getBlockEntity(extradata.readBlockPos()), new SimpleContainerData(2));
 
 
     }
@@ -76,7 +74,7 @@ public class WoodenFridgeMenu extends AbstractContainerMenu {
         super(ModMenuTypes.WOODEN_FRIDGE_MENU.get(), id);
         checkContainerSize(inv, 18);
         blockentity = (wooden_fridge_entity) entity;
-        this.level = inv.player.level;
+        this.level = inv.player.getLevel();
         this.data = data;
         addPlayerInventory(inv);
         addPlayerHotbar(inv);

@@ -5,10 +5,10 @@ import net.meme2001.farmsimmod.item.Moditems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.network.NetworkEvent;
 
 import java.util.function.Supplier;
@@ -38,7 +38,7 @@ public class DaysC2SPacket {
         context.enqueueWork(() -> {
             // HERE WE ARE ON THE SERVER!
             ServerPlayer player = context.getSender();
-            ServerLevel level = context.getSender().getLevel();
+            Level level = context.getSender().getLevel();
             Inventory in = context.getSender().getInventory();
 
 
