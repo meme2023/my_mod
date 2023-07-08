@@ -35,7 +35,7 @@ public class ModPacket {
         INSTANCE.sendToServer(message);
     }
     public static <MSG> void SendToPlayer (MSG message, ServerPlayer player){
-        INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
+        INSTANCE.send(PacketDistributor.PLAYER.with(() -> player),  message);
     }
 
     }
